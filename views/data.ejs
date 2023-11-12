@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ./partials/header %>
+<body>
+    <%- include ./partials/navbar %>
+    <h1>This is the data page</h1>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Phone</td>
+            <td>Company Name</td>
+          </tr>
+        </thead>
+        <% for (let i=0; i<userData.length; i++) { %>
+          <tr>
+           <td><%=userData[i].name %></td>
+           <td><%=userData[i].email%></td> 
+           <td><%=userData[i].phone%></td> 
+           <td><%=userData[i].company.name%></td> 
+          </tr>
+        <% } %>
+      </table>
+    <%- include ./partials/scripts %>
+</body>
+</html>

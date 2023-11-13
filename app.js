@@ -26,6 +26,10 @@ app.use('/users', usersRouter);
 app.use('/profile', profileRouter);
 app.use('/data', dataRouter);
 
+app.post("/login", (req , res) => {
+  return res.redirect('/data');
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

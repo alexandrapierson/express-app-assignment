@@ -1,20 +1,12 @@
 var express = require('express');
+const app = require('../app');
+const res = require('express/lib/response');
+const req = require('express/lib/request');
 var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index');
 });
-
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('login');
-
-  form.addEventListening('submit', function(event) {
-    event.preventDefault();
-
-    window.location.href = '/data';
-  });
-});
-
 
 module.exports = router;
